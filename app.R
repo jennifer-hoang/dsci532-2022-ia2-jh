@@ -2,7 +2,9 @@ library(dash)
 library(dashHtmlComponents)
 library(ggplot2)
 library(plotly)
-library(tidyverse)
+library(readr)
+library(dplyr)
+
 
 app <- Dash$new(external_stylesheets = dbcThemes$BOOTSTRAP)
 
@@ -55,4 +57,4 @@ app$callback(
 )
 
 
-app$run_server(debug = T)
+app$run_server(host= '0.0.0.0')
